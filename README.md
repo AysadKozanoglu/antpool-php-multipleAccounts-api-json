@@ -59,8 +59,7 @@ Examples:
 - Paymanet History
     - $ant->get('paymentHistory', $currency = 'BTC');
 
-$ant->get() return a JSON decoded PHP array.  
-
+see api.php for more example details
 
 
 # Current Limitations
