@@ -1,4 +1,12 @@
 <?php
+//
+// @author              Aysad Kozanoglu
+// @email               ak@linuxhowto.net
+// @link                https://linuxhowto.net
+// @project             antpool-php-api
+// @licence             MIT licence
+//
+
 /*!
  * @author		Sebastian Lutz
  * @copyright	Baebeca Solutions - Lutz
@@ -19,13 +27,11 @@ require_once(__DIR__.'/classes/antpool.php');
 if (file_exists(__DIR__.'/config.php')) {
 	require_once(__DIR__.'/config.php');
 } else {
-	exit('please create your own config.php based on config.sample.php');
+	exit('config.php not found');
 }
 
 // init antpool class
 $ant_config = new ant_config();
-
-//$ant 	= new antpool($ant_config->username, $ant_config->api_key, $ant_config->api_secret);
 
 for ($i=0; $i<count($ant_config->pools);$i++){
 //print_r($ant_config->pools);
@@ -35,10 +41,10 @@ for ($i=0; $i<count($ant_config->pools);$i++){
 
 
 // check if custom.php exist and execute
-if (file_exists(__DIR__.'/custom.php')) {
-	require_once(__DIR__.'/custom.php');
+if (file_exists(__DIR__.'/api.php')) {
+	require_once(__DIR__.'/api.php');
 } else {
-	require_once(__DIR__.'/custom.sample.php');
+	echo "api.php error not found";
 }
 
 unset($ant);
