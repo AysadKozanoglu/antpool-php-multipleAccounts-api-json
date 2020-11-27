@@ -10,9 +10,8 @@ Get files from Github repository
     $ git clone https://github.com/AysadKozanoglu/antpool-php-multipleAccounts-api-json.git
     $ cd antpool-php-multipleAccounts-api-json
 
-Create you own config file and add antpool API access credentials
+Edit config.php file and add antpool API access credentials
 
-    $ cp config.sample.php config.php
     $ vim config.php
 
 
